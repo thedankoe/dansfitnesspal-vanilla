@@ -1,0 +1,103 @@
+////////////////
+// HEADER / SEARCH 
+////////////////
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+
+    &__field {
+        width: 40rem;
+        margin-right: 2rem;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 2rem;
+
+        &:focus {
+            border: 2px solid $secondaryLight;
+            outline: none;
+            transition: all .3s ease;
+        }
+    }
+
+    &__btn {
+        background: none;
+        border: none;
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+        fill: #fff;
+        
+        &:hover {
+            fill: $secondaryLight;
+            transition: all .3s ease;
+        }
+    }
+}
+
+////////////////
+// RESULTS / COLUMN 1 
+////////////////
+
+.results {
+    
+    &__list {
+        width: 100%;
+
+        li {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid $secondaryLight;
+
+            &:hover {
+                background-color: #eee;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__name {
+        font-size: 2.5rem;
+        color: $primary;
+    }
+
+    &__calories {
+        font-size: 1.8rem;
+        color: $primaryLight;
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+        fill: $primaryLight;
+    }
+}
+
+////////////////
+// NUTRITION FACTS / COLUMN 2 
+////////////////
+
+.nutrition-facts {
+    height: 100vh;
+    background-color: #eee;
+}
+
+////////////////
+// MEAL LIST / COLUMN 3
+////////////////

@@ -1,0 +1,30 @@
+$primary: #232526;
+$primaryLight: #414345;
+$secondary: #008B8B;
+$secondaryLight: #00BFBF;
+$light: #ccc;
+
+$grey: (
+  default-1: #ccc,
+  default-2: rgb(167, 164, 164),
+  primary: #f4f2f2,
+  primary-light: #faf9f9,
+  secondary: #dfd7d7,
+  light: #f1eeee,
+  dark: #333,
+  dark-primary: #777,
+  dark-default: #999
+);
+
+$shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow2: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+$font-family: "Dosis", sans-serif;
+
+$border-bottom: 1px solid map-get($grey, secondary);
+
+$breakpoint: (
+  largest: 75em,
+  tablet: 56.25em,
+  mobile: 41.88em
+);

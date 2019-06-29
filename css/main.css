@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Dosis", sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.header {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #232526;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-columns: 1.1fr 2fr 1.1fr; }
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px; }
+
+.search {
+  display: flex;
+  align-items: center; }
+  .search__field {
+    width: 40rem;
+    margin-right: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2rem; }
+    .search__field:focus {
+      border: 2px solid #00BFBF;
+      outline: none;
+      transition: all .3s ease; }
+  .search__btn {
+    background: none;
+    border: none; }
+  .search__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: #fff; }
+    .search__icon:hover {
+      fill: #00BFBF;
+      transition: all .3s ease; }
+
+.results__list {
+  width: 100%; }
+  .results__list li {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #00BFBF; }
+    .results__list li:hover {
+      background-color: #eee;
+      transition: all .3s ease; }
+
+.results__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.results__name {
+  font-size: 2.5rem;
+  color: #232526; }
+
+.results__calories {
+  font-size: 1.8rem;
+  color: #414345; }
+
+.results__icon {
+  height: 3rem;
+  width: 3rem;
+  fill: #414345; }
+
+.nutrition-facts {
+  height: 100vh;
+  background-color: #eee; }

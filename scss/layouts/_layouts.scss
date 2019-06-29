@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10rem minmax(100rem, auto);
+    grid-template-columns: 1.1fr 2fr 1.1fr;
+}
