@@ -78,9 +78,21 @@ body {
   justify-content: space-between;
   align-items: center; }
 
+.results__data {
+  display: flex;
+  align-items: center; }
+
+.results__img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem; }
+
 .results__name {
+  margin-left: 2rem;
   font-size: 2.5rem;
-  color: #232526; }
+  font-weight: 300;
+  color: #232526;
+  text-transform: capitalize; }
 
 .results__calories {
   font-size: 1.8rem;

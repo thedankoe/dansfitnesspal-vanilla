@@ -4,20 +4,33 @@
   "description": "Spinoff of MyFitnessPal. Calculate calories for a meal.",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "node-sass scss/main.scss css/main.css -w",
-    "dev": "live-server",
-    "start": "npm-run-all --parallel dev sass:watch",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/main.css -o css/main.prefix.css",
-    "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
+    "sass:watch": "node-sass src/scss/main.scss dist/css/main.css -w",
+    "dev": "webpack --mode development",
+    "dev:server": "webpack-dev-server --mode development --open",
+    "start": "npm-run-all --parallel dev:server sass:watch",
+    "build": "webpack --mode production",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" dist/css/main.css -o dist/css/main.prefix.css",
+    "compress:css": "node-sass dist/css/main.prefix.css dist/css/main.css --output-style compressed",
     "build:css": "npm-run-all prefix:css compress:css"
   },
   "author": "Dan Koe",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.6.0",
+    "babel-loader": "^8.0.6",
     "concat": "^1.0.3",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.1.2"
+    "postcss-cli": "^6.1.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "axios": "^0.19.0"
   }
 }
