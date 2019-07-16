@@ -1,0 +1,17 @@
+.secondary-heading {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+
+    &::after {
+        content: '';
+        display: block;
+        margin: 1.5rem auto;
+        width: 5rem;
+        height: 2px;
+        background-color: $secondaryLight;
+    }
+}

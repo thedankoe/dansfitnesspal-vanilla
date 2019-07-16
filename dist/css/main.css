@@ -29,8 +29,7 @@ body {
 .container {
   height: 100vh;
   display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto);
-  grid-template-columns: 1.1fr 2fr 1.1fr; }
+  grid-template-columns: 1.1fr 2fr; }
 
 .logo {
   font-size: 2rem;
@@ -103,6 +102,21 @@ body {
   width: 3rem;
   fill: #414345; }
 
-.nutrition-facts {
-  height: 100vh;
+.loader {
+  margin: 5rem auto;
+  text-align: center; }
+  .loader svg {
+    width: 5rem;
+    height: 5rem;
+    fill: #00BFBF;
+    transform-origin: 44% 50%;
+    animation: rotate 1.5s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.meal-list {
   background-color: #eee; }
