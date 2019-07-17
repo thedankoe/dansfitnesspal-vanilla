@@ -6,9 +6,10 @@
   "scripts": {
     "sass:watch": "node-sass src/scss/main.scss dist/css/main.css -w",
     "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
     "dev:server": "webpack-dev-server --mode development --open",
     "start": "npm-run-all --parallel dev:server sass:watch",
-    "build": "webpack --mode production",
+    "build": "npm-run-all prefix:css compress:css prod",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" dist/css/main.css -o dist/css/main.prefix.css",
     "compress:css": "node-sass dist/css/main.prefix.css dist/css/main.css --output-style compressed",
     "build:css": "npm-run-all prefix:css compress:css"
